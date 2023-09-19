@@ -1,0 +1,56 @@
+/* Custom CSS for styling and animations */
+body {
+  background: url(pexels-anete-lusina-5721872.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+text.container {
+  background: url(pexels-anete-lusina-5721872.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #008000;
+  border-color: #ffc300;
+}
+
+.btn-primary:hover {
+  background-color: #ffc300;
+  border-color: #008000;
+}
+
+/* Optional: Add more animations or styling as needed */
+/* ... (previous CSS styles) ... */
+
+/* Custom styling for the E-Waste Facts section */
+#eWasteFacts {
+  background-color: #daf7a6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  margin-top: 30px;
+}
+
+#eWasteFacts:hover {
+  transform: scale(1.05);
+}
+
+.fact {
+  margin-bottom: 20px;
+  border-left: 4px solid #008000;
+  padding-left: 10px;
+}

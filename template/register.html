@@ -1,0 +1,104 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min1111.css' %}">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min11.css' %}">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/register.css' %}">
+
+  <title>Multiple user login</title>
+</head>
+
+<body>
+  <div class="content" style="justify-items: center;" >
+    <div class="row justify-content-center" >
+      <div class="col-md-6 contents">
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <h2 style="text-align: center;">E-Waste</h2><hr>
+            <div class="form-block" style="padding: 0%; padding-left: 30px;"  >
+                <h1 style="text-align: center;margin-bottom: 50px;">User Registration page</h1>
+              <span class="mb-0 text-muted">
+                {% if msg %}
+                {{ msg | safe }}
+                {% else %}
+                {% endif %}
+              </span>
+              <form method="post">
+                {% csrf_token %}
+                <div class="form-group first">
+                  username
+                  <label for="username"></label>
+                  {{ form.username }}
+                </div>
+                Email
+                <div class="form-group first">
+                  <label for="email"></label>
+                  {{ form.email}}
+                </div>Password
+                <div class="form-group last mb-4">
+                  <label for="password"></label>
+                  {{ form.password1 }}
+                </div>confirm Password
+                <div class="form-group last mb-4">
+                  <label for="password"></label>
+                  {{ form.password2 }}
+                </div>
+                <div class="d-flex mb-5 align-items-center">
+                  <label class="control control--checkbox mb-0"><span class="caption">Admin</span>
+                    {{ form.is_admin }}
+                    <div class="control__indicator"></div>
+                  </label>
+                </div>
+                <div class="d-flex mb-5 align-items-center">
+                  <label class="control control--checkbox mb-0"><span class="caption">customer</span>
+                    {{ form.is_customer }}
+                    <div class="control__indicator"></div>
+                  </label>
+                </div>
+                <div class="d-flex mb-5 align-items-center">
+                  <label class="control control--checkbox mb-0"><span class="caption">employee</span>
+                    {{ form.is_employee }}
+                    <div class="control__indicator"></div>
+                  </label>
+                </div>
+                <h1></h1>
+
+                <span class="text-error">{{ form.errors }}</span>
+                <input type="submit" value="Register" class="btn btn-pill text-white btn-block btn-success">
+
+                <p><a  href="{% url 'login' %}">Already have an account</a></p>
+
+                <p><a style="text-align: right;" href="{% url 'main' %}">Go to Dashboard</a></p>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min11.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

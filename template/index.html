@@ -1,0 +1,65 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min1.css' %}">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min1.css' %}">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="../static/css/index.css">
+
+  <title>Login Dashboard</title>
+</head>
+
+<body>
+  <div class="content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+              <div class="form-block" style="border-radius: 50px;">
+                <div class="mb-4">
+                  <h2 style="text-align: center;">E-Waste</h2>
+                  <hr>
+                  <h1 style="text-align: center;">Welcome</h1>
+                </div>
+                <label >Log in if you already have registered!</label>
+                <div class="form-group last mb-4">
+                  <div class="loginbutton"><a class="btn btn-pill text-white  btn-block btn-success"
+                     href="{% url 'login_view' %}">Login</a></div>
+                </div>
+                <label>If not register here!</label>
+                <div class="form-group last mb-4">
+                  <div><a class="btn btn-pill text-white btn-block btn-success"
+                        href="{% url 'register' %}">Register</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min1.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

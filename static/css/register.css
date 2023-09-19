@@ -1,0 +1,95 @@
+/* Style the background */
+body {
+    background-color: #A4D0A4;
+}
+.content{
+    margin-left :400px;
+    padding :100px;
+}
+
+
+/* Style the form container */
+.contents {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+/* Style form inputs and labels */
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+/* Highlight input border when focused */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #fff;
+}
+/* Style the submit button */
+.btn-success {
+    background-color: #29BB8A;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add hover animation to the submit button */
+.btn-success:hover {
+    background-color: #29BB8A;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+/* Style checkboxes */
+.control {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style checkbox indicators */
+.control__indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style the checked state of checkboxes */
+.control input:checked ~ .control__indicator {
+    background-color: #007bff;
+    border: none;
+}
+/* Add a fade-in animation to the form */
+.contents {
+    opacity: 0;
+    animation: fade-in 0.5s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
